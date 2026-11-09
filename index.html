@@ -306,17 +306,42 @@
       color: #cbd5e1;
       font-size: 15px;
       max-width: 600px;
-      margin: 0 auto 25px;
+      margin: 0 auto 20px;
+    }
+
+    .contact-info-list {
+      margin: 20px auto 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
     }
 
     .phone-display {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 800;
       direction: ltr;
       display: inline-block;
       color: var(--accent);
-      margin-bottom: 20px;
       text-decoration: none;
+    }
+
+    .email-display {
+      font-size: 17px;
+      font-weight: 700;
+      direction: ltr;
+      display: inline-block;
+      color: #f1f5f9;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    .email-display:hover {
+      color: var(--accent);
+      border-color: var(--accent);
     }
 
     .whatsapp-float {
@@ -364,6 +389,7 @@
 </head>
 <body>
 
+  <!-- شريط التنقل العلوي مع شعار HMA -->
   <header>
     <a href="#" class="brand-logo">
       <div class="logo-badge">HMA</div>
@@ -380,6 +406,7 @@
     </nav>
   </header>
 
+  <!-- واجهة البداية -->
   <section class="hero">
     <div class="hero-logo-box">
       <div class="hero-logo-badge">
@@ -395,6 +422,7 @@
     </div>
   </section>
 
+  <!-- من نحن -->
   <section class="section" id="about">
     <div class="section-title">
       <h2>من نحن</h2>
@@ -405,6 +433,7 @@
     </p>
   </section>
 
+  <!-- أنشطتنا وخدماتنا -->
   <section class="section" id="services" style="padding-top: 0;">
     <div class="section-title">
       <h2>أنشطتنا وخدماتنا</h2>
@@ -435,6 +464,7 @@
     </div>
   </section>
 
+  <!-- طرق الدفع والمعاملات المالية -->
   <section class="section" id="payments">
     <div class="payment-section">
       <div class="section-title" style="margin-bottom: 15px;">
@@ -473,28 +503,37 @@
     </div>
   </section>
 
+  <!-- قسم تواصل معنا المباشر مع رقم الهاتف والبريد الإلكتروني -->
   <section class="section" id="contact">
     <div class="contact-card">
       <h2>يسعدنا تواصلكم الدائم معنا</h2>
-      <p>للطلبات المباشرة، التوريدات، أو استفسارات متجر هاشم فون، تواصلوا معنا مباشرة عبر الرقم المعتمد:</p>
-      <div>
-        <a href="tel:+249998040864" class="phone-display">+249 99 804 0864</a>
+      <p>للطلبات المباشرة، التوريدات، أو استفسارات متجر هاشم فون، يسعدنا تواصلكم عبر الهاتف، الواتساب، أو البريد الإلكتروني الرسمي:</p>
+      
+      <div class="contact-info-list">
+        <div>
+          <a href="tel:+249998040864" class="phone-display">📞 +249 99 804 0864</a>
+        </div>
+        <div>
+          <a href="mailto:hashmmohmed466@gmail.com" class="email-display">✉️ hashmmohmed466@gmail.com</a>
+        </div>
       </div>
-      <br>
+
       <a href="https://wa.me/249998040864?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%B4%D8%B1%D9%83%D8%A9%20HMA" target="_blank" class="btn btn-primary">
         محادثة مباشرة عبر واتساب 💬
       </a>
     </div>
   </section>
 
+  <!-- زر الواتساب العائم -->
   <a href="https://wa.me/249998040864?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20HMA" target="_blank" class="whatsapp-float">
     💬
   </a>
 
+  <!-- التذييل الرسمي -->
   <footer>
-    <p>جميع الحقوق محفوظة &copy; 2026 شركة <strong>HMA للتجارة المحدودة</strong></p>
-    <p style="margin-top: 5px; font-size: 12px; color: #64748b;">
-      الخرطوم — السودان | هاتف: <a href="tel:+249998040864">+249998040864</a>
+    <p>جميع الحقوق محفوظة &copy; 2026 شركة <strong>HMA للتجارة المحدودة</strong> (HMA Trading Co. Ltd)</p>
+    <p style="margin-top: 6px; font-size: 12px; color: #94a3b8;">
+      الخرطوم — السودان | هاتف: <a href="tel:+249998040864">+249998040864</a> | بريد: <a href="mailto:hashmmohmed466@gmail.com">hashmmohmed466@gmail.com</a>
     </p>
   </footer>
 
