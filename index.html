@@ -1,366 +1,219 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMA للتجارة المحدودة | HMA Trading Co. Ltd.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0f2b48;
-            --accent: #d4af37;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --white: #ffffff;
-            --border: #e2e8f0;
-            --text-muted: #64748b;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شركة HMA للتجارة المحدودة | HMA Trading Co. Ltd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a192f;
+      --secondary: #0f2b48;
+      --accent: #d4af37;
+      --accent-hover: #b89628;
+      --dark: #111827;
+      --light: #f8fafc;
+      --white: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --whatsapp: #25d366;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Cairo', sans-serif;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+    }
 
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.7;
-        }
+    body {
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-        header {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 20px 0;
-            border-bottom: 3px solid var(--accent);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    /* الهيدر وشريط التنقل */
+    header {
+      background: var(--primary);
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .logo-badge {
+      background: linear-gradient(135deg, #d4af37, #f3e5ab, #aa771c);
+      color: var(--primary);
+      font-weight: 900;
+      font-size: 20px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+    }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
+    .brand-text {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 800;
+    }
 
-        .logo span {
-            color: var(--accent);
-        }
+    .brand-text span {
+      display: block;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+    }
 
-        nav a {
-            color: var(--white);
-            text-decoration: none;
-            margin-right: 20px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: color 0.3s;
-        }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
 
-        nav a:hover {
-            color: var(--accent);
-        }
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
 
-        .hero {
-            background: linear-gradient(rgba(15, 43, 72, 0.9), rgba(15, 43, 72, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80') center/cover;
-            color: var(--white);
-            text-align: center;
-            padding: 80px 20px;
-        }
+    nav a:hover {
+      color: var(--accent);
+    }
 
-        .hero h1 {
-            font-size: 38px;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
+    .nav-btn {
+      background: var(--accent);
+      color: var(--primary) !important;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-weight: 700 !important;
+      transition: background 0.3s;
+    }
 
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto 25px;
-            color: #cbd5e1;
-        }
+    .nav-btn:hover {
+      background: var(--accent-hover);
+    }
 
-        .btn-main {
-            background-color: var(--accent);
-            color: var(--primary);
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 8px;
-            display: inline-block;
-            transition: 0.3s;
-        }
+    /* الواجهة الترحيبية */
+    .hero {
+      background: linear-gradient(135deg, rgba(10, 25, 47, 0.95), rgba(15, 43, 72, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      color: var(--white);
+      text-align: center;
+      padding: 90px 20px 80px;
+    }
 
-        .btn-main:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
+    .hero-logo-box {
+      margin-bottom: 20px;
+    }
 
-        section {
-            padding: 60px 0;
-        }
+    .hero-logo {
+      display: inline-block;
+      border: 2px solid var(--accent);
+      padding: 12px 30px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+    }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    .hero-logo h2 {
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--accent);
+      letter-spacing: 2px;
+      line-height: 1.1;
+    }
 
-        .section-title h2 {
-            font-size: 28px;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
+    .hero-logo p {
+      font-size: 13px;
+      color: #f1f5f9;
+      letter-spacing: 2px;
+      margin: 0;
+    }
 
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 50%;
-            transform: translateX(50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent);
-        }
+    .hero h1 {
+      font-size: 34px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
+    .hero p.lead {
+      font-size: 17px;
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
 
-        .card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border);
-        }
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-        .card h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
 
-        /* بطاقة بنك الخرطوم */
-        .bank-card {
-            background: linear-gradient(135deg, #0b4f35, #146c43);
-            color: var(--white);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-            margin-top: 20px;
-        }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary);
+    }
 
-        .bank-card .bank-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-        }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
 
-        .bank-badge {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-        }
+    .btn-outline {
+      border: 2px solid var(--accent);
+      color: var(--accent);
+    }
 
-        .account-box {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 15px 0;
-        }
+    .btn-outline:hover {
+      background: var(--accent);
+      color: var(--primary);
+    }
 
-        .account-num {
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            direction: ltr;
-        }
+    /* الأقسام العامة */
+    .section {
+      padding: 65px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-        .copy-btn {
-            background: var(--accent);
-            border: none;
-            color: var(--primary);
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.2s;
-        }
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
 
-        .copy-btn:hover {
-            opacity: 0.9;
-        }
+    .section-title h2 {
+      font-size: 28px;
+      color: var(--secondary);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
 
-        footer {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 40px 0 20px;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-info {
-            margin-bottom: 20px;
-            font-size: 15px;
-            color: #cbd5e1;
-        }
-
-        .footer-info a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .copyright {
-            font-size: 13px;
-            color: #94a3b8;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .hero h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- الترويسة -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">HMA <span>TRADING</span></div>
-            <nav>
-                <a href="#about">من نحن</a>
-                <a href="#services">الأنشطة</a>
-                <a href="#payment">الدفع والحسابات</a>
-                <a href="#contact">تواصل معنا</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- الواجهة الرئيسية -->
-    <div class="hero">
-        <div class="container">
-            <h1>شركة HMA للتجارة المحدودة</h1>
-            <p>HMA Trading Co. Ltd. — التميز في خدمات التجارة العامة، التوريدات، والحلول الرقمية المتكاملة.</p>
-            <a href="#contact" class="btn-main">تواصل معنا الآن</a>
-        </div>
-    </div>
-
-    <!-- من نحن -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>من نحن</h2>
-            </div>
-            <div class="card">
-                <p>تأسست <strong>شركة HMA للتجارة المحدودة</strong> ككيان تجاري وطني رائد ومسجل، بمقر رئيسي في العاصمة الخرطوم، لتقديم حلول تجارية متقدمة تواكب تطلعات السوق المحلي والإقليمي. نلتزم بأعلى معايير المصداقية والجودة في تلبية احتياجات عملائنا وشركائنا عبر شبكة واسعة من الشراكات والخدمات التجارية والتوريدات المتخصصة.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- الأنشطة والخدمات -->
-    <section id="services" style="background-color: #f1f5f9;">
-        <div class="container">
-            <div class="section-title">
-                <h2>أنشطة وقطاعات الشركة</h2>
-            </div>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>📱 وحدة هاشم فون (Hashim Phone)</h3>
-                    <p>الذراع التجاري المتخصص في تجارة وتوريد أحدث الهواتف الذكية، الساعات الذكية، الإكسسوارات المعتمدة، وقطع الغيار الأصلية مع ضمان الكفاءة والأسعار التنافسية.</p>
-                </div>
-                <div class="card">
-                    <h3>📦 قطاع التجارة العامة والتوريدات</h3>
-                    <p>إدارة سلاسل الإمداد، الاستيراد والتصدير، وتوريد السلع والبضائع والمعدات وتأمين متطلبات المؤسسات والأفراد بأعلى مستويات الكفاءة والموثوقية.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- الحسابات المصرفية والدفع -->
-    <section id="payment">
-        <div class="container">
-            <div class="section-title">
-                <h2>الحسابات المصرفية المعتمدة</h2>
-                <p style="color: var(--text-muted); margin-top: 5px;">لتسهيل المعاملات وتسديد قيمة الطلبيات والتوريدات محلياً</p>
-            </div>
-            <div class="bank-card">
-                <div class="bank-header">
-                    <div>
-                        <h3 style="font-size: 20px;">بنك الخرطوم | Bank of Khartoum</h3>
-                        <p style="font-size: 13px; opacity: 0.9;">التحويل عبر تطبيق بنكك (Bankak)</p>
-                    </div>
-                    <span class="bank-badge">حساب معتمد</span>
-                </div>
-                <p style="font-size: 14px;">اسم صاحب الحساب: <strong>هاشم محمد آدم</strong></p>
-                
-                <div class="account-box">
-                    <div>
-                        <span style="font-size: 12px; display: block; opacity: 0.8;">رقم الحساب:</span>
-                        <span class="account-num" id="accNumber">3467325</span>
-                    </div>
-                    <button class="copy-btn" onclick="copyAccount()">نسخ الرقم</button>
-                </div>
-                <p style="font-size: 12px; opacity: 0.85;">⚠️ يُرجى إرسال إشعار التحويل عبر البريد الإلكتروني الرسمي أو الواتساب لتأكيد العملية فوراً.</p>
-            </div>
-        </div>
-    </section>
-<a href="https://wa.me/249998040864text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%20%D9%85%D8%AA%D8%AC%D8%B1%20%D9%87%D8%A7%D8%B4%D9%85%20%D9%8F%D9%81%D9%88%D9%86" target="_blank" class="btn">تواصل عبر واتساب المتجر</a>
-
-    <!-- التواصل والتذييل -->
-    <footer id="contact">
-        <div class="container">
-            <h3 style="margin-bottom: 15px; color: var(--accent);">شركة HMA للتجارة المحدودة</h3>
-            <div class="footer-info">
-                <p>📍 المقر: الخرطوم، جمهورية السودان</p>
-                <p>✉️ البريد الإلكتروني الرسمي: <a href="mailto:info@hmatrading-co.com">info@hmatrading-co.com</a></p>
-                <p>🌐 الموقع الرسمي: www.hmatrading-co.com</p>
-            </div>
-            <div class="copyright">
-                <p>جميع الحقوق محفوظة © 2026 شركة HMA للتجارة المحدودة (HMA Trading Co. Ltd.)</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function copyAccount() {
-            const accNum = document.getElementById("accNumber").innerText;
-            navigator.clipboard.writeText(accNum).then(() => {
-                alert("تم نسخ رقم الحساب بنجاح!");
-            });
-        }
-    </script>
-</body>
-</html>
+    .section-title .bar {
+      width: 
